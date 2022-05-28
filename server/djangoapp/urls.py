@@ -9,9 +9,13 @@ urlpatterns = [
     # view refers to the view function
     # name the URL
 
+    path(route='', view=views.get_dealerships, name='index'),
+
     # path for about view
+    path(route='about', view=views.get_about, name='about'),
 
     # path for contact us view
+    path(route='contact', view=views.get_contact, name='contact'),
 
     # path for registration
     path('registration/', views.registration_request, name='registration'),
@@ -21,10 +25,6 @@ urlpatterns = [
     
     # path for logout
     path('logout/', views.logout_request, name='logout'),
-
-    path(route='', view=views.get_dealerships, name='index'),
-    path(route='about', view=views.get_about, name='about'),
-    path(route='contact', view=views.get_contact, name='contact'),
 
     # path for dealer reviews view
 
